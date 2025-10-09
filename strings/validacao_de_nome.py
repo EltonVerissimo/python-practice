@@ -2,4 +2,9 @@ import re
 
 name = input("Digite o nome do cliente para validação: ")
 
-isValidName = re.match(r"")
+padrao_nome = r'[A-Z][a-z]*'
+
+if re.fullmatch(padrao_nome, name):
+    print("Nome válido")
+else:
+    print("Nome inválido")
